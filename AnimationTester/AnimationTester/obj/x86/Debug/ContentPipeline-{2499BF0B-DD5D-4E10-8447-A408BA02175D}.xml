@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>stand_Diffuse-sheet.png</Source>
+      <Name>stand_Diffuse-sheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\stand_Diffuse-sheet.xnb</Output>
+      <Time>2016-01-25T13:52:55.0742833-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Walkingtest.png</Source>
+      <Name>Walkingtest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\Walkingtest.xnb</Output>
+      <Time>2016-01-25T14:23:17.5318251-06:00</Time>
+    </Item>
+    <Item>
+      <Source>StandingTest.png</Source>
+      <Name>StandingTest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\StandingTest.xnb</Output>
+      <Time>2016-01-25T17:14:06.3025215-06:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{2499BF0B-DD5D-4E10-8447-A408BA02175D}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTesterContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-01-18T19:04:56.6361502-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

@@ -1,0 +1,9 @@
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\AnimationTester.exe
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\AnimationTester.pdb
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\obj\x86\Debug\AnimationTester.csprojResolveAssemblyReference.cache
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\obj\x86\Debug\AnimationTester.exe
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\obj\x86\Debug\AnimationTester.pdb
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\stand_Diffuse-sheet.xnb
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\Walkingtest.xnb
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\StandingTest.xnb
