@@ -22,8 +22,10 @@ namespace AnimationTester
         Texture2D stand;
         Texture2D walkingAnimation;
         Texture2D characterState;
+        Texture2D slashState;
 
-        Vector2 pos1 = new Vector2(300, 300);
+        Vector2 pos1 = new Vector2(300, 300); //position of character
+        Vector2 pos2 = new Vector2(600, 300); //position of collision object/enemy
 
         float speed1 = 0.75f;
 
@@ -69,6 +71,8 @@ namespace AnimationTester
 
             walkingAnimation = Content.Load<Texture2D>("Walkingtest");
             stand = Content.Load<Texture2D>("StandingTest");
+            slashState = Content.Load<Texture2D>("sprite-0002");
+            
             characterState = stand;
             // TODO: use this.Content to load your game content here
         }
@@ -99,7 +103,7 @@ namespace AnimationTester
             timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
 
 
-            if (Keyboard.GetState().IsKeyUp(Keys.D) && Keyboard.GetState().IsKeyUp(Keys.A))
+            if (Keyboard.GetState().IsKeyUp(Keys.D) && Keyboard.GetState().IsKeyUp(Keys.A) && Keyboard.GetState().IsKeyUp(Keys.Space))
             {
                 
                 currentFrame.X = 0;
@@ -110,6 +114,18 @@ namespace AnimationTester
                 }
                 characterState = stand; 
                 //there is an issue where the sprite will occasionally flash when going to 'stand'. this is caused by the animation logic. the flash is 100 ms gap between frames. this needs to be fixed.
+            }
+
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            {
+                sheetSize = new Point(3, 1);
+                if (timeSinceLastFrame > millisecondsPerFrame)
+                {
+                    timeSinceLastFrame = 0;
+                    currentFrame.X = AnimationClass.AnimationPlay(currentFrame, sheetSize.X);
+                }
+                characterState = slashState;
             }
 
             //how to handle keyboard input conflict?
@@ -138,6 +154,8 @@ namespace AnimationTester
                 characterState = walkingAnimation;
                 direction = SpriteEffects.FlipHorizontally;
             }
+            
+            if (Collide()) Exit(); 
 
             base.Update(gameTime);
         }
@@ -153,9 +171,20 @@ namespace AnimationTester
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend);
             spriteBatch.Draw(characterState, pos1, new Rectangle(currentFrame.X * frameSize.X, currentFrame.Y*frameSize.Y, frameSize.X, frameSize.Y), Color.White, 0, Vector2.Zero, 1, direction, 0);
+            spriteBatch.Draw(stand, pos2, new Rectangle(0, 0, 80, 80), Color.White, 0, Vector2.Zero, 1, SpriteEffects.FlipHorizontally, 0);
             spriteBatch.End();
 
             base.Draw(gameTime);
         }
+        protected bool Collide()
+        {
+            //Rectangle ringsRect = new Rectangle((int)ringsPosition.X, (int)ringsPosition.Y, ringsFrameSize.X, ringsFrameSize.Y); 
+            //Rectangle skullRect = new Rectangle((int)skullPosition.X, (int)skullPosition.Y, skullFrameSize.X, skullFrameSize.Y);
+            //return ringsRect.Intersects(skullRect);
+            Rectangle playerRect = new Rectangle((int)pos1.X + 16, (int)pos1.Y + 20, 16, 60);
+            Rectangle enemyRect = new Rectangle((int)pos2.X + 16, (int)pos2.Y + 20, 16, 60);
+            return playerRect.Intersects(enemyRect);
+
+        } 
     }
 }

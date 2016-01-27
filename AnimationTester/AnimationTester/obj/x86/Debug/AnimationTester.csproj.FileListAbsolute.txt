@@ -7,3 +7,4 @@ C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\Animation
 C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\stand_Diffuse-sheet.xnb
 C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\Walkingtest.xnb
 C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\StandingTest.xnb
+C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\Sprite-0002.xnb

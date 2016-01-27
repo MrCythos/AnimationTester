@@ -28,6 +28,15 @@
       <Output>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\StandingTest.xnb</Output>
       <Time>2016-01-25T17:14:06.3025215-06:00</Time>
     </Item>
+    <Item>
+      <Source>Sprite-0002.png</Source>
+      <Name>Sprite-0002</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Howard\Documents\XNA Projects\AnimationTester\AnimationTester\AnimationTester\bin\x86\Debug\Content\Sprite-0002.xnb</Output>
+      <Time>2016-01-27T12:21:43.1852911-06:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{2499BF0B-DD5D-4E10-8447-A408BA02175D}</ContentProjectGUID>
