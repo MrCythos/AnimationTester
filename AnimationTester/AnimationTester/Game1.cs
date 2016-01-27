@@ -25,7 +25,7 @@ namespace AnimationTester
 
         Vector2 pos1 = new Vector2(300, 300);
 
-        float speed1 = 0.3f;
+        float speed1 = 0.75f;
 
         Point frameSize = new Point(80, 80);
         Point currentFrame = new Point(0, 0);
@@ -94,54 +94,49 @@ namespace AnimationTester
                 this.Exit();
 
             // TODO: Add your update logic here
+
+
+            timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
+
+
             if (Keyboard.GetState().IsKeyUp(Keys.D) && Keyboard.GetState().IsKeyUp(Keys.A))
             {
-                sheetSize = new Point(1, 1);
-                characterState = stand; //there is an issue where the sprite will occasionally flash when going to 'stand'. this is caused by the animation logic. the flash is 100 ms gap between frames. this needs to be fixed.
+                if (timeSinceLastFrame > millisecondsPerFrame)
+                {
+                    timeSinceLastFrame = 0;
+                    currentFrame.X = AnimationClass.AnimationStill();
+                }
+                characterState = stand; 
+                //there is an issue where the sprite will occasionally flash when going to 'stand'. this is caused by the animation logic. the flash is 100 ms gap between frames. this needs to be fixed.
             }
+
             //how to handle keyboard input conflict?
             if (Keyboard.GetState().IsKeyDown(Keys.D))
             {
                 pos1.X += speed1;
                 sheetSize = new Point(10, 1);
+                if (timeSinceLastFrame > millisecondsPerFrame)
+                {
+                    timeSinceLastFrame = 0;
+                    currentFrame.X = AnimationClass.AnimationLoop(currentFrame, sheetSize);
+                }
                 characterState = walkingAnimation;
                 direction = SpriteEffects.None;
             }
-            //else
-            //{
-            //    sheetSize = new Point(1, 1);
-            //    characterState = stand;
-            //}
 
             if (Keyboard.GetState().IsKeyDown(Keys.A))
             {
                 pos1.X -= speed1;
                 sheetSize = new Point(10, 1);
+                if (timeSinceLastFrame > millisecondsPerFrame)
+                {
+                    timeSinceLastFrame = 0;
+                    currentFrame.X = AnimationClass.AnimationLoop(currentFrame, sheetSize);
+                }
                 characterState = walkingAnimation;
                 direction = SpriteEffects.FlipHorizontally;
             }
-            //else //this is completely unnecessary since it already checks keys.d to set the animation to stand
-            //{
-            //    sheetSize = new Point(1, 1);
-            //    characterState = stand;
-            //}
 
-            //++currentFrame.X;
-            //if(currentFrame.X >= sheetSize.X)
-            //{
-            //    currentFrame.X = 0;
-            //}
-
-            timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
-            if(timeSinceLastFrame>millisecondsPerFrame)
-            {
-                timeSinceLastFrame = 0;
-                ++currentFrame.X;
-                if (currentFrame.X >= sheetSize.X)
-                {
-                    currentFrame.X = 0;
-                }
-            }
             base.Update(gameTime);
         }
 
