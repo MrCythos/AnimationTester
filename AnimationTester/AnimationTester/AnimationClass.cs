@@ -20,9 +20,10 @@ namespace AnimationTester
                 currentFrame.X = 0;
             return currentFrame.X;
         }
-        public static int AnimationStill() //Point currentFrame
+        public static int AnimationStill(Point currentFrame) //Point currentFrame
         {
-            return 0;
+            currentFrame.X = 0;
+            return currentFrame.X;
         }
         public static int AnimationPlay(Point currentFrame, int lengthOfAnimation)
         {

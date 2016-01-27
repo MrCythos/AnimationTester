@@ -101,10 +101,12 @@ namespace AnimationTester
 
             if (Keyboard.GetState().IsKeyUp(Keys.D) && Keyboard.GetState().IsKeyUp(Keys.A))
             {
+                
+                currentFrame.X = 0;
                 if (timeSinceLastFrame > millisecondsPerFrame)
                 {
                     timeSinceLastFrame = 0;
-                    currentFrame.X = AnimationClass.AnimationStill();
+                    currentFrame.X = AnimationClass.AnimationStill(currentFrame);
                 }
                 characterState = stand; 
                 //there is an issue where the sprite will occasionally flash when going to 'stand'. this is caused by the animation logic. the flash is 100 ms gap between frames. this needs to be fixed.
